@@ -1,8 +1,6 @@
 :host {
     background-image: linear-gradient(135deg, #a7e0e5 32%, #ffe0e3 68%);
     background-repeat: no-repeat;
-    margin: 0;
-    overflow: hidden;
 }
 
 .corner {
@@ -236,4 +234,9 @@
     100% {
       transform: translateX(-30px) translateY(10px);
     }
+  }
+
+  section:hover {
+    transform: scale(1.1);
+    background: rgba(255, 255, 255, 0.25);
   }

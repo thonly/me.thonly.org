@@ -1,6 +1,6 @@
 import template from './template.mjs';
 
-class TlBody extends HTMLBodyElement {
+class TlCard extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -12,4 +12,4 @@ class TlBody extends HTMLBodyElement {
     }
 }
 
-customElements.define('tl-body', TlBody, { extends: 'body' });
+customElements.define('tl-card', TlCard);
