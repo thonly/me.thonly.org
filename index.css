@@ -1,0 +1,11 @@
+:root {
+    --palette-color-1: white;
+    --palette-color-2: #2A9D8F;
+    --palette-color-3: #7209b7;
+    --palette-color-4: indigo; 
+    --palette-color-5: black;
+}
+
+body {
+    background: var(--palette-color-1);
+}
