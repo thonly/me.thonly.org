@@ -5,7 +5,3 @@
     --palette-color-4: indigo; 
     --palette-color-5: black;
 }
-
-body {
-    background: var(--palette-color-1);
-}
