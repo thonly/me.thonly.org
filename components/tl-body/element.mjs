@@ -8,7 +8,21 @@ class TlBody extends HTMLBodyElement {
     }
 
     connectedCallback() {
-        
+        const card = document.querySelector('tl-card');
+        const front = document.getElementById('front');
+        const back = document.getElementById('back')
+
+        front.onclick = () => {
+            front.style.display = 'none';
+            back.style.display = 'block';
+            card.back();
+        }
+
+        back.onclick = () => {
+            back.style.display = 'none';
+            front.style.display = 'block';
+            card.front();
+        }
     }
 }
 

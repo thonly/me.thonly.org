@@ -1,5 +1,5 @@
 :host {
-    background-image: linear-gradient(135deg, #a7e0e5 32%, #ffe0e3 68%);
+    background-image: linear-gradient(135deg, var(--color-1) 32%, var(--color-2) 68%);
     background-repeat: no-repeat;
 }
 
@@ -20,7 +20,7 @@
 #top-left {
     top: 0;
     left: 0;
-    background-image: linear-gradient(-45deg, transparent 50%, rgb(205, 72, 107) 50%);
+    background-image: linear-gradient(-45deg, transparent 50%, var(--color-3) 50%);
 }
 
 #language {
@@ -33,7 +33,7 @@
 #top-right {
     top: 0;
     right: 0;
-    background-image: linear-gradient(45deg, transparent 50%, rgb(205, 72, 107) 50%);
+    background-image: linear-gradient(45deg, transparent 50%, var(--color-3) 50%);
 }
 
 #email {
@@ -44,7 +44,7 @@
 #bottom-left {
     bottom: 0;
     left: 0;
-    background-image: linear-gradient(45deg, #1d9bf0 50%, transparent 50%);
+    background-image: linear-gradient(45deg, var(--color-4) 50%, transparent 50%);
 }
 
 #facebook {
@@ -55,7 +55,7 @@
 #bottom-right {
     bottom: 0;
     right: 0;
-    background-image: linear-gradient(-45deg, #1d9bf0 50%, transparent 50%);
+    background-image: linear-gradient(-45deg, var(--color-4) 50%, transparent 50%);
 }
 
 #twitter {
@@ -66,7 +66,7 @@
 .circle1 {
     width: 500px;
     height: 500px;
-    background-color: white;
+    background-color: var(--color-5);
     border: 0;
     opacity: 0.3;
     position: absolute;
@@ -75,12 +75,13 @@
     left: -255px;
     animation: circle-ani1 10s infinite;
     animation-timing-function: linear;
+    z-index: -100;
   }
   
   .circle2 {
     width: 120px;
     height: 120px;
-    background-color: white;
+    background-color: var(--color-5);
     border: 0;
     opacity: 0.5;
     position: absolute;
@@ -89,12 +90,13 @@
     left: -69px;
     animation: circle-ani2 10s infinite;
     animation-timing-function: linear;
+    z-index: -100;
   }
   
   .circle3 {
     width: 30px;
     height: 30px;
-    background-color: white;
+    background-color: var(--color-5);
     border: 0;
     opacity: 0.6;
     position: absolute;
@@ -103,13 +105,14 @@
     left: 78px;
     animation: circle-ani3 10s infinite;
     animation-timing-function: linear;
+    z-index: -100;
   }
   
   .circle4 {
     width: 220px;
     height: 220px;
     background-color: transparent;
-    border: solid 2px white;
+    border: solid 2px var(--color-5);
     opacity: 0.6;
     position: absolute;
     border-radius: 100%;
@@ -117,12 +120,13 @@
     left: 100px;
     animation: circle-ani3 10s infinite;
     animation-timing-function: linear;
+    z-index: -100;
   }
   
   .circle5 {
     width: 50px;
     height: 50px;
-    background-color: white;
+    background-color: var(--color-5);
     border: 0;
     opacity: 0.5;
     position: absolute;
@@ -131,13 +135,14 @@
     left: 298px;
     animation: circle-ani2 10s infinite;
     animation-timing-function: linear;
+    z-index: -100;
   }
   
   .circle6 {
     width: 300px;
     height: 300px;
     background-color: transparent;
-    border: solid 2px white;
+    border: solid 2px var(--color-5);
     opacity: 0.6;
     position: absolute;
     border-radius: 100%;
@@ -145,12 +150,13 @@
     right: -80px;
     animation: circle-ani3 10s infinite;
     animation-timing-function: linear;
+    z-index: -100;
   }
   
   .circle7 {
     width: 165px;
     height: 165px;
-    background-color: white;
+    background-color: var(--color-5);
     border: 0;
     opacity: 0.45;
     position: absolute;
@@ -159,12 +165,13 @@
     right: -106px;
     animation: circle-ani1 10s infinite;
     animation-timing-function: linear;
+    z-index: -100;
   }
   
   .circle8 {
     width: 20px;
     height: 20px;
-    background-color: white;
+    background-color: var(--color-5);
     border: 0;
     opacity: 0.7;
     position: absolute;
@@ -173,6 +180,7 @@
     right: 78px;
     animation: circle-ani2 10s infinite;
     animation-timing-function: linear;
+    z-index: -100;
   }
 
   @keyframes circle-ani1 {
@@ -234,9 +242,4 @@
     100% {
       transform: translateX(-30px) translateY(10px);
     }
-  }
-
-  section:hover {
-    transform: scale(1.1);
-    background: rgba(255, 255, 255, 0.25);
   }
