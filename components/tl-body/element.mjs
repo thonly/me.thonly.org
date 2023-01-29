@@ -23,6 +23,8 @@ class TlBody extends HTMLBodyElement {
             front.style.display = 'block';
             card.front();
         }
+
+        this.style.display = 'flex';
     }
 }
 

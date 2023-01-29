@@ -70,6 +70,7 @@ section {
 
 .front header {
   text-align: center;
+  padding-top: 20px;
 }
 
 .front main {
@@ -83,6 +84,19 @@ section {
   text-align: center;
 }
 
+.front h1 {
+  margin: 15px 10px 10px;
+}
+
+.front p {
+  margin: 10px;
+}
+
+.front small {
+  cursor: default;
+  margin: 0 20px 10px;
+}
+
 .logo {
   width: 150px;
   border-radius: 50%;
@@ -90,46 +104,70 @@ section {
 
 .back {
   display: grid;
-  grid-template-rows: 1fr 1fr;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 3fr 1fr;
 }
 
 .back header {
   grid-column: 1 / 2;
   grid-row: 1 / 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-evenly;
+  align-items: center;
 }
 
 .back main {
   grid-column: 2 / 3;
   grid-row: 1 / 2;
+  padding-left: 10px;
 }
 
 .back footer {
   grid-column: 1 / span 2;
   grid-row: 2 / 3;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.title {
+  text-transform: uppercase;
+}
+
+.detail {
+  height: 25px;
+  margin-bottom: -8px;
+  margin-right: 5px;
 }
 
 .social {
-  height: 50px;
+  padding: 10px;
+  border-radius: 10px;
+  border: 2px solid #575F60;
+}
+
+.social:hover {
+  background: #575F60;
+  stroke: #fff;
 }
 
 button {
   background: #fff;
   color: #212129;
   text-transform: uppercase;
-  font-size: 1.2em;
   letter-spacing: 0.1em;
-  padding: 10px 45px;
+  padding: 10px 20px;
   border-radius: 30px;
   transition: 300ms;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
+  cursor: pointer;
+  width: fit-content;
+  border: #575F60 solid 2px;
 }
 
 button:hover {
-  background: #212129;
+  background: #575F60;
   color: #fff;
   transition: 300ms;
 }
@@ -140,7 +178,8 @@ h1 {
 }
 
 .back h1 {
-  font-size: xx-large;
+  font-size: 3em;
+  margin: 25px 0 10px;
 }
 
 p {
@@ -149,11 +188,6 @@ p {
 
 a {
   color: currentColor;
-}
-
-small {
-  cursor: default;
-  margin: 15px 20px;
 }
 
 footer {

@@ -25,6 +25,11 @@ class TlCard extends HTMLElement {
     back() {
         this.#card.classList.add('flip');
     }
+
+    speak(name) {
+        const audio = new Audio(`components/tl-card/${name}.mp3`);
+        audio.play();
+    }
 }
 
 customElements.define('tl-card', TlCard);
