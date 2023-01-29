@@ -14,7 +14,7 @@ template.innerHTML = `
         <img title="Copy URL" id="language" class="icon" src="components/tl-body/globe.svg" onclick="this.getRootNode().host.copy()">
         <a title="Share via Email" href="mailto:?cc=thonly@siliconwat.dev&bcc=thonly@heartbank.ceo&subject=Thon%20Ly%27s%20Business%20Card&body=Check%20out%20Thon%27s%20Business%20Card%20for%20a%20FREE%20Custom%20static%20website!%0A%0Ahttps://me.thonly.org"><img id="email" class="icon" src="components/tl-body/mail.svg"></a>
         <div title="Share via Facebook" class="fb-share-button" data-href="https://me.thonly.org" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fme.thonly.org%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore"><img id="facebook" class="icon" src="components/tl-body/facebook.svg"></a></div>
-        <a title="Share via Twitter" target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20%40thonly%20Business%20Card%20for%20a%20FREE%20custom%20static%20website!%0A%0A&url=https://me.thonly.org&hashtags=web,blockchain,ios,consultant"><img id="twitter" class="icon" src="components/tl-body/twitter.svg"></a>
+        <a title="Share via Twitter" target="_blank" class="twitter-share-button" href="https://twitter.com/intent/tweet?text=Check%20out%20%40thonly%20Business%20Card%20for%20a%20FREE%20Custom%20static%20website!%0A%0A&url=https://me.thonly.org&hashtags=web,blockchain,ios,consultant"><img id="twitter" class="icon" src="components/tl-body/twitter.svg"></a>
         <div class="circle1"></div>
         <div class="circle2"></div>
         <div class="circle3"></div>
