@@ -19,7 +19,7 @@ body {
     justify-content: space-evenly;
     margin: 0;
     overflow: hidden;
-    height: 80vh;
+    height: 100vh;
     width: 100vw;
 }
 
@@ -30,4 +30,10 @@ img {
 
 #back {
     display: none;
+}
+
+@media (max-width: 480px), (max-height: 480px) {
+    body {
+        height: 80vh;
+    }
 }

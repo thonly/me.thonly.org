@@ -19,8 +19,8 @@ class TlCard extends HTMLElement {
 
     connectedCallback() {
         //Array.from(this.shadowRoot.getElementById('tagline').children).forEach(element => this.#assignGimics(element));
-        this.#handleOrientation();
-        screen.orientation.onchange = this.#handleOrientation.bind(this);
+        //this.#handleOrientation();
+        //screen.orientation.onchange = this.#handleOrientation.bind(this);
         this.#container.onmouseenter = () => this.#container.animate([{ transform: `scale(${this.#scale})` }, { transform: `scale(${this.#scale + 0.1}) perspective(1400px)` }], { duration: 500, fill: "forwards" });
         this.#container.onmouseleave = () => this.#container.animate([{ transform: `scale(${this.#scale + 0.1})` }, { transform: `scale(${this.#scale}) perspective(1400px)` }], { duration: 500, fill: "forwards" });
     }
