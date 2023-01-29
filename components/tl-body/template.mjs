@@ -4,7 +4,6 @@ const template = document.createElement("template");
 
 template.innerHTML = `
     <link rel="stylesheet" href="components/tl-body/shadow.css">
-    <p id="alert"></p>
     <slot></slot>
     <aside>
         <div id="top-left" class="corner"></div>

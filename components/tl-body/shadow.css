@@ -3,11 +3,6 @@
     background-repeat: no-repeat;
 }
 
-#alert {
-  display: none;
-  color: green;
-}
-
 .corner {
     position: absolute;
     z-index: 100;

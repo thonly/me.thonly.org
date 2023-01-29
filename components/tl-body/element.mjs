@@ -23,12 +23,10 @@ class TlBody extends HTMLBodyElement {
             front.style.display = 'block';
             card.front();
         }
-
-        this.style.display = 'flex';
     }
 
     async copy() {
-        const alert = this.shadowRoot.getElementById('alert');
+        const alert = document.getElementById('alert');
         await navigator.clipboard.writeText("https://me.thonly.org");
         alert.textContent = "The URL has been copied!";
         alert.style.display = 'block';
