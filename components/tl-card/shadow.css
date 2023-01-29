@@ -3,8 +3,6 @@
 }
 
 .container {
-  width: 600px;
-  height: 340px;
   margin: 0 auto; 
   position: relative;
 	perspective: 1000;
