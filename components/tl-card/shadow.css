@@ -144,8 +144,9 @@ section {
 }
 
 .social {
+  background-color: rgba(255, 255, 255, 0.25);
   padding: 10px;
-  border-radius: 10px;
+  border-radius: 15px;
   border: 2px solid #575F60;
 }
 
@@ -155,7 +156,7 @@ section {
 }
 
 button {
-  background: #fff;
+  background-color: rgba(255, 255, 255, 0.5);
   color: #212129;
   text-transform: uppercase;
   letter-spacing: 0.1em;
@@ -192,5 +193,5 @@ a {
 }
 
 footer {
-  background: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.25);
 }
