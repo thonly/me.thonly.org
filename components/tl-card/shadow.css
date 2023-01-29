@@ -70,7 +70,7 @@ section {
 
 @media (max-width: 480px) {
   :host {
-      --card-scale: 0.6;
+      --card-scale: 0.4;
   }
 }
 
