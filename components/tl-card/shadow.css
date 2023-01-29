@@ -212,3 +212,154 @@ a {
 footer {
   background-color: rgba(255, 255, 255, 0.25);
 }
+
+@keyframes rotate {
+  60%  {transform:rotateZ(0deg);
+  }
+  80% {transform:rotateZ(360deg);
+  }
+  100% {transform:rotateZ(360deg);
+  }
+}
+
+@keyframes antiRotate {
+  60%  {transform:rotateZ(0deg);
+  }
+  80% {transform:rotateZ(-360deg);
+  }
+  100% {transform:rotateZ(-360deg);
+  }
+}
+
+@keyframes inverter {
+  0%  {background-color:transparent;
+       color:white;
+  }
+  2%  {background-color:transparent;
+       color:white;
+  }
+  4% {wbackground-color:white;
+       color:#1e2628;
+  }
+  30% {background-color:white;
+       color:#1e2628;
+  }
+  42% {background-color:transparent;
+       color:white;
+  }
+  100% {background-color:transparent;
+       color:white;
+  }
+}
+
+@keyframes jumper {
+  0%  {
+    transform:translateY(none);
+  }
+  5% {
+    transform:translateY(-5px);
+  }
+  10% {
+    transform:translateY(0px);
+  }
+  12% {
+    transform:translateY(2px);
+  }
+  15% {
+    transform:scaleY(1);
+  }
+  25% {
+    transform:translateY(none);
+  }
+  100% {
+    transform:translateY(none);
+  }
+}
+
+@keyframes colorRun {
+  0%  {
+    color:white;
+  }
+  40%  {
+    color:white;
+  }
+  50% {
+    color:#FF38CB;
+  }
+  60% {
+   color:#2E6EFF;
+  }
+  70% {
+    color:#46FFD7;
+  }
+  80% {
+    color:#E08043;
+  }
+  90% {
+    color:#56E338;
+  }
+  100% {
+    color:white;
+  }
+}
+
+@keyframes colorRun2 {
+  0%  {
+    color:white;
+  }
+  40%  {
+    color:white;
+  }
+  50% {
+    color:#56E338;
+  }
+  60% {
+   color:#E08043;
+  }
+  70% {
+    color:#46FFD7;
+  }
+  80% {
+    color:#2E6EFF;
+  }
+  90% {
+    color:#FF38CB;
+  }
+  100% {
+    color:white;
+  }
+}
+
+@keyframes swipe {
+  0%  {
+    transform:scaleY(1);
+    color:white;
+  }
+  40%  {
+    transform:scaleY(1);
+    top:0px;
+    color:white;
+  }
+  50% {
+    transform:scaleY(0.5);
+    top:5px;
+    color:transparent;
+  }
+  55% {
+    transform:scaleY(0.5);
+    top:-5px;
+    color:transparent;
+  }
+  60% {
+    transform:scaleY(1);
+    top:0px;
+    color:white;
+  }
+  80% {
+    transform:scaleY(1);
+    color:white;
+  }
+  100% {
+    color:white;
+  }
+}

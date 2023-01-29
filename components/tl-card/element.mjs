@@ -18,6 +18,7 @@ class TlCard extends HTMLElement {
     }
 
     connectedCallback() {
+        //Array.from(this.shadowRoot.getElementById('tagline').children).forEach(element => this.#assignGimics(element));
         //this.#handleOrientation();
         //screen.orientation.onchange = this.#handleOrientation.bind(this);
         this.#container.onmouseenter = () => this.#container.animate([{ transform: `scale(${this.#scale})` }, { transform: `scale(${this.#scale + 0.1}) perspective(1400px)` }], { duration: 500, fill: "forwards" });
@@ -58,6 +59,18 @@ class TlCard extends HTMLElement {
             default:
                 console.log("Orientation API not supported in this browser");
           }
+    }
+
+    #assignGimics(element) {
+        //const gimics = ['colorRun', 'jumper', 'inverter', 'rotate', 'antiRotate', 'colorRun2', 'swipe'];
+        const gimics = ['jumper', 'inverter', 'rotate', 'antiRotate', 'swipe'];
+        const delay = Math.floor(Math.random() * 1);
+        const aniTime = Math.floor(Math.random() * 1) + 2;
+        const next = delay + aniTime;
+        element.style.animation = gimics[Math.floor(Math.random() * gimics.length)];
+        element.style.animationDelay = delay + "s";
+        element.style.animationDuration = aniTime + "s";
+        setTimeout(this.#assignGimics.bind(this), next * 1000, element);
     }
 }
 

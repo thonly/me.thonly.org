@@ -17,7 +17,7 @@ template.innerHTML = `
                 </main>
                 <footer>
                     <h1 onmouseenter="this.getRootNode().host.speak('siliconwat')">Silicon Wat LLC</h1>
-                    <p>Web, Blockchain and iOS | Custom Development</p>
+                    <p id="tagline"><span>Web</span>, <span>Blockchain</span> and <span>iOS</span> | Custom Development</p>
                     <a href="https://siliconwat.dev">siliconwat.dev</a>
                 </footer>
             </section>
