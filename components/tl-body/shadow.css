@@ -3,6 +3,11 @@
     background-repeat: no-repeat;
 }
 
+#alert {
+  display: none;
+  color: green;
+}
+
 .corner {
     position: absolute;
     z-index: 100;
@@ -28,6 +33,7 @@
   left: 5px;
   width: 23px;
   height: 23px;
+  cursor: pointer;
 }
 
 #top-right {

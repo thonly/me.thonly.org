@@ -26,6 +26,14 @@ class TlBody extends HTMLBodyElement {
 
         this.style.display = 'flex';
     }
+
+    async copy() {
+        const alert = this.shadowRoot.getElementById('alert');
+        await navigator.clipboard.writeText("https://me.thonly.org");
+        alert.textContent = "The URL has been copied!";
+        alert.style.display = 'block';
+        setTimeout(() => alert.style.display = 'none', 5000);
+    }
 }
 
 customElements.define('tl-body', TlBody, { extends: 'body' });

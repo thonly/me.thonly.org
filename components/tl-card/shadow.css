@@ -1,4 +1,7 @@
 :host {
+  --card-width: 600px;
+  --card-height: 340px;
+  --card-scale: 1;
   font-size: medium;
   animation: drop-fade 1.2s forwards cubic-bezier(0.645, 0.045, 0.355, 1);
   opacity: 0;
@@ -10,12 +13,13 @@
 	perspective: 1000;
   transform-style: preserve-3d;
   perspective-origin: right;
-  transform: perspective(1400px);
+  transform: scale(var(--card-scale)) perspective(1400px);
+  z-index: 300;
 }
 
 .card {
-  width: 600px;
-  height: 340px;
+  width: var(--card-width);
+  height: var(--card-height);
   position: relative; 
   transform: rotate(0deg);
   transform-origin: 100% 0%;
@@ -31,8 +35,9 @@ section {
   height: 100%;
   backface-visibility: hidden;
 
-  background: rgba(255, 255, 255, 0.1);
-  backdrop-filter: blur(20px);
+  background-color: rgba(255, 255, 255, 0.15);
+  /*backdrop-filter: blur(50px);
+  -webkit-backdrop-filter: blur(50px);*/
   border-radius: 25px;
   box-shadow: 0 25px 25px rgba(0, 0, 0, 0.1);
   overflow: hidden;
@@ -60,6 +65,18 @@ section {
   to {
     filter: blur(0px);
     opacity: 1;
+  }
+}
+
+@media (max-width: 480px) {
+  :host {
+      --card-scale: 0.6;
+  }
+}
+
+@media (max-height: 480px) {
+  :host {
+      --card-scale: 0.7;
   }
 }
 
@@ -144,7 +161,7 @@ section {
 }
 
 .social {
-  background-color: rgba(255, 255, 255, 0.25);
+  background-color: rgba(255, 255, 255, 0.5);
   padding: 10px;
   border-radius: 15px;
   border: 2px solid #575F60;
