@@ -19,8 +19,8 @@ class TlCard extends HTMLElement {
 
     connectedCallback() {
         //Array.from(this.shadowRoot.getElementById('tagline').children).forEach(element => this.#assignGimics(element));
-        //this.#handleOrientation();
-        //screen.orientation.onchange = this.#handleOrientation.bind(this);
+        this.#handleOrientation();
+        screen.orientation.onchange = this.#handleOrientation.bind(this);
         this.#container.onmouseenter = () => this.#container.animate([{ transform: `scale(${this.#scale})` }, { transform: `scale(${this.#scale + 0.1}) perspective(1400px)` }], { duration: 500, fill: "forwards" });
         this.#container.onmouseleave = () => this.#container.animate([{ transform: `scale(${this.#scale + 0.1})` }, { transform: `scale(${this.#scale}) perspective(1400px)` }], { duration: 500, fill: "forwards" });
     }
@@ -39,31 +39,32 @@ class TlCard extends HTMLElement {
     }
     
     #handleOrientation() {
-        switch (screen.orientation.type) {
-            case "landscape-primary":
-                this.style.setProperty('--card-scale', 0.8);
-                console.log("landscape");
-                break;
-            case "landscape-secondary":
-                this.style.setProperty('--card-scale', 0.8);
-                console.log("landscape reverse");
-                break;
-            case "portrait-primary":
-                this.style.setProperty('--card-scale', 0.6);
-                console.log("portrait");
-                break;
-            case "portrait-secondary":
-                this.style.setProperty('--card-scale', 0.6);
-                console.log("portrait reverse");
-                break;
-            default:
-                console.log("Orientation API not supported in this browser");
-          }
+        if (window.innerWidth <= 480 || window.innerHeight <= 480) {
+            switch (screen.orientation.type) {
+                case "landscape-primary":
+                    this.style.setProperty('--card-scale', 0.6);
+                    console.log("landscape");
+                    break;
+                case "landscape-secondary":
+                    this.style.setProperty('--card-scale', 0.6);
+                    console.log("landscape reverse");
+                    break;
+                case "portrait-primary":
+                    this.style.setProperty('--card-scale', 0.4);
+                    console.log("portrait");
+                    break;
+                case "portrait-secondary":
+                    this.style.setProperty('--card-scale', 0.4);
+                    console.log("portrait reverse");
+                    break;
+                default:
+                    console.log("Orientation API not supported in this browser");
+            }
+        }
     }
 
     #assignGimics(element) {
-        //const gimics = ['colorRun', 'jumper', 'inverter', 'rotate', 'antiRotate', 'colorRun2', 'swipe'];
-        const gimics = ['jumper', 'inverter', 'rotate', 'antiRotate', 'swipe'];
+        const gimics = ['colorRun', 'jumper', 'inverter', 'rotate', 'antiRotate', 'colorRun2', 'swipe'];
         const delay = Math.floor(Math.random() * 1);
         const aniTime = Math.floor(Math.random() * 1) + 2;
         const next = delay + aniTime;
