@@ -64,49 +64,50 @@
     right: 5px;
 }
 
+figure {
+  display: block;
+}
+
+figure div {
+  position: absolute;
+  animation-timing-function: linear;
+  background-color: var(--color-5);
+  border: 0;
+  border-radius: 100%;
+  z-index: -100;
+}
+
+@media (max-width: 480px) or (max-height: 480px) {
+  figure {
+    display: none;
+  }
+}
+
 .circle1 {
     width: 500px;
     height: 500px;
-    background-color: var(--color-5);
-    border: 0;
     opacity: 0.3;
-    position: absolute;
-    border-radius: 100%;
     bottom: -254px;
     left: -255px;
     animation: circle-ani1 10s infinite;
-    animation-timing-function: linear;
-    z-index: -100;
-  }
+}
   
   .circle2 {
     width: 120px;
     height: 120px;
-    background-color: var(--color-5);
-    border: 0;
     opacity: 0.5;
-    position: absolute;
-    border-radius: 100%;
     bottom: 214px;
     left: -69px;
     animation: circle-ani2 10s infinite;
-    animation-timing-function: linear;
-    z-index: -100;
   }
   
   .circle3 {
     width: 30px;
     height: 30px;
-    background-color: var(--color-5);
-    border: 0;
     opacity: 0.6;
-    position: absolute;
-    border-radius: 100%;
     top: 183px;
     left: 78px;
     animation: circle-ani3 10s infinite;
-    animation-timing-function: linear;
-    z-index: -100;
   }
   
   .circle4 {
@@ -115,28 +116,18 @@
     background-color: transparent;
     border: solid 2px var(--color-5);
     opacity: 0.6;
-    position: absolute;
-    border-radius: 100%;
     bottom: -100px;
     left: 100px;
     animation: circle-ani3 10s infinite;
-    animation-timing-function: linear;
-    z-index: -100;
   }
   
   .circle5 {
     width: 50px;
     height: 50px;
-    background-color: var(--color-5);
-    border: 0;
     opacity: 0.5;
-    position: absolute;
-    border-radius: 100%;
     bottom: 30px;
     left: 298px;
     animation: circle-ani2 10s infinite;
-    animation-timing-function: linear;
-    z-index: -100;
   }
   
   .circle6 {
@@ -145,43 +136,27 @@
     background-color: transparent;
     border: solid 2px var(--color-5);
     opacity: 0.6;
-    position: absolute;
-    border-radius: 100%;
     top: -150px;
     right: -80px;
     animation: circle-ani3 10s infinite;
-    animation-timing-function: linear;
-    z-index: -100;
   }
   
   .circle7 {
     width: 165px;
     height: 165px;
-    background-color: var(--color-5);
-    border: 0;
     opacity: 0.45;
-    position: absolute;
-    border-radius: 100%;
     top: 71px;
     right: -106px;
     animation: circle-ani1 10s infinite;
-    animation-timing-function: linear;
-    z-index: -100;
   }
   
   .circle8 {
     width: 20px;
     height: 20px;
-    background-color: var(--color-5);
-    border: 0;
     opacity: 0.7;
-    position: absolute;
-    border-radius: 100%;
     top: 183px;
     right: 78px;
     animation: circle-ani2 10s infinite;
-    animation-timing-function: linear;
-    z-index: -100;
   }
 
   @keyframes circle-ani1 {

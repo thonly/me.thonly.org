@@ -15,6 +15,7 @@ class TlCard extends HTMLElement {
 
     get #scale() {
         return Number(getComputedStyle(this).getPropertyValue('--card-scale'));
+        //return 1;
     }
 
     connectedCallback() {

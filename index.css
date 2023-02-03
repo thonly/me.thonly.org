@@ -37,8 +37,44 @@ img {
     display: none;
 }
 
+video {
+    display: none;
+    position: absolute;
+    object-fit: cover;
+    z-index: -100;
+    filter: blur(20px);
+  }
+
+/*svg {
+    margin-right: -140px;
+    transition: transform .8s ease-in-out;
+}
+
+svg:hover {
+    transform: scale(1.1);
+}*/
+
+@media (max-width: 480px) {
+    video {
+        height: 100%;
+    }
+
+    /*svg {
+        width: 350px;
+        margin-right: -10px;
+    }*/
+}
+
 @media (max-height: 480px) {
     body {
         flex-direction: row;
     }
+
+    video {
+        width: 100%;
+    }
+
+    /*svg {
+        width: 350px;
+    }*/
 }
