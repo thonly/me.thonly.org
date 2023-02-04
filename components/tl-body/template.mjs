@@ -24,8 +24,8 @@ template.innerHTML = `
             <div class="circle7"></div>
             <div class="circle8"></div>
         </figure>
-        <div id="fb-root"></div>
     </aside>
+    <!--<div id="fb-root"></div>
     <script>
         window.twttr = (function(d, s, id) {
             var js, fjs = d.getElementsByTagName(s)[0],
@@ -43,7 +43,7 @@ template.innerHTML = `
             return t;
         }(document, "script", "twitter-wjs"));
     </script>
-    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="kuWZUvKl"></script>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v15.0" nonce="kuWZUvKl"></script>-->
 `;
 
 export default template;
