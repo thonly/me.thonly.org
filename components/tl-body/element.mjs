@@ -10,7 +10,6 @@ class TlBody extends HTMLElement {
     connectedCallback() {
         const video = this.shadowRoot.querySelector('video');
         video.src = `components/tl-body/background${Math.floor(Math.random()*2+1)}.mp4`;
-        //video.style.display = window.chrome ? 'block' : 'none';
 
         const card = this.shadowRoot.querySelector('tl-card');
         const front = this.shadowRoot.getElementById('front');
@@ -34,7 +33,8 @@ class TlBody extends HTMLElement {
         await navigator.clipboard.writeText("https://me.thonly.org");
         alert.textContent = "The URL has been copied!";
         alert.style.display = 'block';
-        setTimeout(() => alert.style.display = 'none', 5000);
+        setTimeout(() => alert.style.display = 'none', 5000);        
+        if (!window.chrome) window.alert(alert.textContent);
     }
 }
 
