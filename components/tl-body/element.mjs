@@ -9,8 +9,8 @@ class TlBody extends HTMLElement {
 
     connectedCallback() {
         const video = this.shadowRoot.querySelector('video');
-        video.src = `background${Math.floor(Math.random()*2+1)}.mp4`;
-        video.style.display = window.chrome ? 'block' : 'none';
+        video.src = `components/tl-body/background${Math.floor(Math.random()*2+1)}.mp4`;
+        //video.style.display = window.chrome ? 'block' : 'none';
 
         const card = this.shadowRoot.querySelector('tl-card');
         const front = this.shadowRoot.getElementById('front');

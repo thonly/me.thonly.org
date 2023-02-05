@@ -8,7 +8,7 @@ figure {
     background-color: var(--color-5);
     border: 0;
     border-radius: 100%;
-    z-index: -100;
+    z-index: -50;
   }
   
   .circle1 {
@@ -148,10 +148,12 @@ figure {
       }
     }
   
-    /* ==== */
+    /* ==== 
   
     @media (max-width: 480px) or (max-height: 480px) {
       figure {
         display: none;
       }
     }
+
+    */
