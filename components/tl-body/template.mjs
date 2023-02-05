@@ -1,10 +1,21 @@
+import "/components/tl-card/element.mjs";
 const template = document.createElement("template");
 
 // Reference: https://codepen.io/gigiyeh/pen/YpqQmJ
 
 template.innerHTML = `
     <link rel="stylesheet" href="components/tl-body/shadow.css">
-    <slot></slot>
+    <link rel="stylesheet" href="components/tl-body/background.css">
+    <header>
+        <p id="alert"></p>
+    </header>
+    <main>
+        <tl-card></tl-card>
+    </main>
+    <footer>
+        <img id="front" src="components/tl-body/left.svg" title="Flip to Back">
+        <img id="back" src="components/tl-body/right.svg" title="Flip to Front">
+    </footer>
     <aside>
         <div id="top-left" class="corner"></div>
         <div id="top-right" class="corner"></div>
@@ -25,6 +36,7 @@ template.innerHTML = `
             <div class="circle8"></div>
         </figure>
     </aside>
+    <video autoplay preload loop muted playsinline></video>
     <!--<div id="fb-root"></div>
     <script>
         window.twttr = (function(d, s, id) {

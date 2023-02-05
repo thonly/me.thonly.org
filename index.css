@@ -13,68 +13,15 @@ html {
 }
 
 body {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: space-evenly;
-    margin: 0;
-    height: 100%;
     width: 100%;
+    height: 100%;
     overflow: hidden;
+    margin: 0;
+    background-image: linear-gradient(135deg, var(--color-1) 32%, var(--color-2) 68%);
+    background-repeat: no-repeat;
 }
 
-img {
-    width: 50px;
-    cursor: pointer;
-}
-
-#alert {
-    display: none;
-    color: green;
-}
-
-#back {
-    display: none;
-}
-
-video {
-    display: none;
-    position: absolute;
-    object-fit: cover;
-    z-index: -100;
-    filter: blur(20px);
-  }
-
-/*svg {
-    margin-right: -140px;
-    transition: transform .8s ease-in-out;
-}
-
-svg:hover {
-    transform: scale(1.1);
-}*/
-
-@media (max-width: 480px) {
-    video {
-        height: 100%;
-    }
-
-    /*svg {
-        width: 350px;
-        margin-right: -10px;
-    }*/
-}
-
-@media (max-height: 480px) {
-    body {
-        flex-direction: row;
-    }
-
-    video {
-        width: 100%;
-    }
-
-    /*svg {
-        width: 350px;
-    }*/
+svg, foreignObject {
+    width: 100%;
+    height: 100%;
 }

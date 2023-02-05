@@ -1,10 +1,8 @@
 import "/components/tl-body/element.mjs";
-import "/components/tl-card/element.mjs";
 
 window.onload = event => {
-    const video = document.querySelector('video');
-    video.src = `background${Math.floor(Math.random()*2+1)}.mp4`;
-    video.style.display = window.chrome ? 'block' : 'none';
+    if (window.chrome) document.body.firstElementChild.style.display = "none";
+    //document.querySelector('svg').setAttribute('viewBox', `0 0 ${window.innerWidth} ${window.innerHeight}`);
 }
 
 window.dataLayer = window.dataLayer || [];

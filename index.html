@@ -15,27 +15,12 @@
 
         <link rel="icon" href="thonly.jpeg">
         <link rel="stylesheet" href="index.css">
-        <script src="//unpkg.com/@ungap/custom-elements/es.js"></script>
         <script src="index.js" type="module"></script>
         <script defer async src="https://www.googletagmanager.com/gtag/js?id=G-LZFZMJEZTN"></script>
         <base href="?lang=en">
     </head>
-    <body is="tl-body">
-        <header>
-            <p id="alert"></p>
-        </header>
-        <main>
-            <tl-card></tl-card>
-            <!--<svg viewBox="0 0 750 340" width="750" height="340">
-                <foreignObject width="750" height="340">
-                    <tl-card></tl-card>
-                </foreignObject>
-            </svg>-->
-        </main>
-        <footer>
-            <img id="front" src="components/tl-body/left.svg" title="Flip to Back">
-            <img id="back" src="components/tl-body/right.svg" title="Flip to Front">
-        </footer>
-        <video autoplay preload loop muted playsinline></video>
+    <body>
+        <tl-body></tl-body>
+        <svg><foreignObject><tl-body></tl-body></foreignObject></svg>
     </body>
 </html>

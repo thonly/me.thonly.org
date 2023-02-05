@@ -1,6 +1,6 @@
 import template from './template.mjs';
 
-class TlBody extends HTMLBodyElement {
+class TlBody extends HTMLElement {
     constructor() {
         super();
         this.attachShadow({ mode: "open" });
@@ -8,9 +8,13 @@ class TlBody extends HTMLBodyElement {
     }
 
     connectedCallback() {
-        const card = document.querySelector('tl-card');
-        const front = document.getElementById('front');
-        const back = document.getElementById('back')
+        const video = this.shadowRoot.querySelector('video');
+        video.src = `background${Math.floor(Math.random()*2+1)}.mp4`;
+        video.style.display = window.chrome ? 'block' : 'none';
+
+        const card = this.shadowRoot.querySelector('tl-card');
+        const front = this.shadowRoot.getElementById('front');
+        const back = this.shadowRoot.getElementById('back')
 
         front.onclick = () => {
             front.style.display = 'none';
@@ -26,7 +30,7 @@ class TlBody extends HTMLBodyElement {
     }
 
     async copy() {
-        const alert = document.getElementById('alert');
+        const alert = this.shadowRoot.getElementById('alert');
         await navigator.clipboard.writeText("https://me.thonly.org");
         alert.textContent = "The URL has been copied!";
         alert.style.display = 'block';
@@ -34,4 +38,4 @@ class TlBody extends HTMLBodyElement {
     }
 }
 
-customElements.define('tl-body', TlBody, { extends: 'body' });
+customElements.define('tl-body', TlBody);
