@@ -34,7 +34,7 @@ class TlBody extends HTMLElement {
         alert.textContent = "The URL has been copied!";
         alert.style.display = 'block';
         setTimeout(() => alert.style.display = 'none', 5000);        
-        if (!window.chrome) window.alert(alert.textContent);
+        //if (!window.chrome) window.alert(alert.textContent);
     }
 }
 
