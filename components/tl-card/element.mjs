@@ -19,6 +19,10 @@ class TlCard extends HTMLElement {
     }
 
     connectedCallback() {
+        this.shadowRoot.querySelector('button').onclick = event => {
+            Calendly.initPopupWidget({url: 'https://calendly.com/thonly/consultation?hide_event_type_details=1&hide_gdpr_banner=1'});
+            return false;
+        }
         //Array.from(this.shadowRoot.getElementById('tagline').children).forEach(element => this.#assignGimics(element));
         //this.#handleOrientation();
         //screen.orientation.onchange = this.#handleOrientation.bind(this);

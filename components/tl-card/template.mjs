@@ -24,7 +24,7 @@ template.innerHTML = `
             <section class="back">
                 <header>
                     <a href="https://thonly.org"><img class="logo" src="components/tl-card/thonly.jpg"></a>
-                    <a href="https://calendar.thonly.org"><button>Book <b>FREE</b> Consultation</button></a>
+                    <button>Book <b>FREE</b> Consultation</button>
                 </header>
                 <main>
                     <h1 onmouseenter="this.getRootNode().host.speak('thonly')" onclick="this.getRootNode().host.speak('thonly')">Thon Ly</h1>
