@@ -13,7 +13,7 @@ template.innerHTML = `
                 </header>
                 <main>
                     <small>Fresno, California</small>
-                    <small>Srae Ambel, Cambodia</small>
+                    <small>Kampot, Cambodia</small>
                 </main>
                 <footer>
                     <h1 onmouseenter="this.getRootNode().host.speak('siliconwat')" onclick="this.getRootNode().host.speak('siliconwat')">Silicon Wat LLC</h1>
