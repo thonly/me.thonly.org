@@ -154,28 +154,6 @@ section {
   text-transform: uppercase;
 }
 
-.back main h1 {
-  margin: 10px 0 4px;
-}
-
-.back main p {
-  margin: 5px 0;
-}
-
-.based {
-  font-style: italic;
-}
-
-.secondary {
-  padding-left: 30px;
-  font-size: small;
-}
-
-.alumni {
-  font-size: small;
-  line-height: 1.3;
-}
-
 .detail {
   height: 25px;
   margin-bottom: -8px;
